@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f75aa683-f8f2-44b4-a0e9-5fd270d6ffee" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/TestDLinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestDLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestDLinkedList.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,6 +74,7 @@
       <workItem from="1570543643218" duration="3151000" />
       <workItem from="1570626670699" duration="25000" />
       <workItem from="1570626739160" duration="1804000" />
+      <workItem from="1570713129047" duration="2971000" />
     </task>
     <servers />
   </component>
