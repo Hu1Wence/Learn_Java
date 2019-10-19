@@ -109,28 +109,17 @@ public class LinkedList {
     }
 
     //删除链表中所有指定元素
-    public void removeAll(int key) {
-        if (head == null) {
-            return;
+    public void reverse() {
+        LinkedNode newHead = null;
+        LinkedNode prev = head.next;
+        LinkedNode node = prev.next;
+        while (node != null) {
+            LinkedNode cur =
+            prev.next = head;
+            node.next = prev;
         }
-        while (head.data == key) {
-            //如果删除元素在链表头部
-            if (head.next == null) {
-                return;
-            }
-            head = head.next;
-        }
-        LinkedNode prve = searchPrve(key);
-        while (prve != null) {
-            if (prve.next.next == null) {
-                //删除元素在最后
-                prve.next = null;
-                return;
-            } else {
-                prve.next = prve.next.next;
-                prve = searchPrve(key);
-            }
-        }
+
+
     }
 
     //获得要删除链表的上一个节点
