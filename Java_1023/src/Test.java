@@ -10,8 +10,7 @@ public class Test {
         System.out.println();
         String str1 = "abcdddcd";
         String str2 = "cd";
-       // System.out.println(myString.replaceAll(str2, str1, "1"));
-        System.out.println(str1.replaceAll(str2, "1"));
+        System.out.println(myString.contains(str2,str1));
     }
 
 }
