@@ -11,7 +11,7 @@ public class binaryTree {
     private static Node root;
 
     //建立一个二叉树
-    public static Node treeBulid() {
+    public static Node treeBuild() {
         Node A = new Node('A');
         Node B = new Node('B');
         Node C = new Node('C');
@@ -110,7 +110,7 @@ public class binaryTree {
                 + getKLevelSize(root.right, k - 1);
     }
     public static void main(String[] args) {
-        root = treeBulid();
+        root = treeBuild();
         //测试前序遍历
         System.out.print("测试前序遍历: ");
         preOrderTraversal(root);
