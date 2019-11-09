@@ -99,15 +99,41 @@ public class binaryTree {
 
     //求第 k 层节点个数
     public static int getKLevelSize(Node root, int k) {
+//        if (k < 1 || root == null) {
+//            return 0;
+//        }
+//        if (k == 1) {
+//            return 1;
+//        }
+//
+//        return getKLevelSize(root.left, k - 1)
+//                + getKLevelSize(root.right, k - 1);
+
+
+
+
+
+
+
+
+
+
+
+
         if (k < 1 || root == null) {
             return 0;
         }
         if (k == 1) {
             return 1;
         }
+        return getKLevelSize(root.left, k - 1) + getKLevelSize(root.right, k - 1);
+    }
 
-        return getKLevelSize(root.left, k - 1)
-                + getKLevelSize(root.right, k - 1);
+    public static Node find(Node root, char toFind) {
+        if (root.)
+        if (root.val == toFind) {
+            return root;
+        }
     }
     public static void main(String[] args) {
         root = treeBuild();

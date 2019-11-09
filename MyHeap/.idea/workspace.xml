@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2db26e67-e7bf-4582-bec4-baab60f342ee" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/binaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/binaryTree.java" afterDir="false" />
-    </list>
+    <list default="true" id="07074fe6-cba7-4725-bec7-6e81c169d887" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,11 +15,7 @@
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="ProjectId" id="1T65i61FRTX7NZLw1FWLjzSozmo" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1TNXazNYCGeW4rV6YD2t0dZwwT5" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -46,16 +39,16 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="binaryTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="binaryTree" />
-      <module name="Binary Tree" />
+    <configuration name="myHeap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="myHeap" />
+      <module name="MyHeap" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.binaryTree" />
+        <item itemvalue="Application.myHeap" />
       </list>
     </recent_temporary>
   </component>
@@ -64,32 +57,16 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2db26e67-e7bf-4582-bec4-baab60f342ee" name="Default Changelist" comment="" />
-      <created>1572767829164</created>
+      <changelist id="07074fe6-cba7-4725-bec7-6e81c169d887" name="Default Changelist" comment="" />
+      <created>1573301594520</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1572767829164</updated>
-      <workItem from="1572767832879" duration="3561000" />
-      <workItem from="1572771652385" duration="59000" />
-      <workItem from="1572878281141" duration="338000" />
-      <workItem from="1573272032160" duration="401000" />
+      <updated>1573301594520</updated>
+      <workItem from="1573301600018" duration="3281000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>
