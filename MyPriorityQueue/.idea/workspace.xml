@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc19c799-feb3-44ce-bf74-4fba9eb5fa1b" name="Default Changelist" comment="" />
+    <list default="true" id="25d9c981-adf9-4784-b842-73cc68813a55" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectId" id="1TahmqB4aqyRbXvGuAJJk8KS7wM" />
+  <component name="ProjectId" id="1Tjn4YLPD1wN7NaKq46dQobI83F" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -51,12 +44,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cc19c799-feb3-44ce-bf74-4fba9eb5fa1b" name="Default Changelist" comment="" />
-      <created>1573704276159</created>
+      <changelist id="25d9c981-adf9-4784-b842-73cc68813a55" name="Default Changelist" comment="" />
+      <created>1573982181889</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1573704276159</updated>
-      <workItem from="1573704281536" duration="1169000" />
+      <updated>1573982181889</updated>
+      <workItem from="1573982183300" duration="642000" />
     </task>
     <servers />
   </component>
