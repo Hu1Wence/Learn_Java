@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8982ac0-c9b7-4ec3-9436-069a9437087e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyPriorityQueue/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MergeSort/src/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MergeSort/src/Sort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyPriorityQueue/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyPriorityQueue/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QuickSort/src/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QuickSort/src/Sort.java" afterDir="false" />
-    </list>
+    <list default="true" id="ae38a7ac-051c-4baa-98ea-cfb59c4cfd6b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,13 +15,8 @@
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="ProjectId" id="1ThGJoGIyvnaN3Lls9EI9IE6T76" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1TkJEIrJ6wXsMBFvc7zOCnwC4PL" />
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -50,17 +38,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="heapSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="heapSort" />
-      <module name="Java_1116" />
+  <component name="RunManager" selected="Application.CardByComparable">
+    <configuration name="CardByComparable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CardByComparable" />
+      <module name="Test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <module name="Test" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.heapSort" />
+        <item itemvalue="Application.CardByComparable" />
+        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -69,28 +65,21 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c8982ac0-c9b7-4ec3-9436-069a9437087e" name="Default Changelist" comment="" />
-      <created>1573904844797</created>
+      <changelist id="ae38a7ac-051c-4baa-98ea-cfb59c4cfd6b" name="Default Changelist" comment="" />
+      <created>1573998046793</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1573904844797</updated>
-      <workItem from="1573904848289" duration="3075000" />
-      <workItem from="1574075412456" duration="2135000" />
+      <updated>1573998046793</updated>
+      <workItem from="1573998050243" duration="664000" />
+      <workItem from="1574061079558" duration="1158000" />
+      <workItem from="1574065780923" duration="1066000" />
+      <workItem from="1574068776528" duration="2553000" />
+      <workItem from="1574079136122" duration="4606000" />
+      <workItem from="1574083895911" duration="53000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>

@@ -41,6 +41,23 @@ public class Sort {
             array[left + k] = temp[k];
         }
     }
+
+    public static void mergrSortByLoop(int[] array) {
+        for (int i = 1; i < array.length; i = i * 2) {
+            for (int j = 0; j < array.length; j = j+ 2 * i) {
+                int low = j;
+                int mid = j + i;
+                if (mid >= array.length) {
+                    continue;
+                }
+                int high = mid + 1;
+                if (high > array.length) {
+                    high = array.length;
+                }
+                merge(array, low, mid, high);
+            }
+        }
+    }
     public static void main(String[] args) {
         int[] arr = {9, 5, 2, 7, 3, 6, 1, 8};
         mergeSort(arr);
