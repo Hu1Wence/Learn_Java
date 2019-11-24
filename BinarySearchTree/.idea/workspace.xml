@@ -38,6 +38,20 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="BinarySearchTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BinarySearchTree" />
+      <module name="BinarySearchTree" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.BinarySearchTree" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -51,6 +65,7 @@
       <workItem from="1574514330524" duration="3641000" />
       <workItem from="1574518428763" duration="11000" />
       <workItem from="1574518564155" duration="1322000" />
+      <workItem from="1574576007853" duration="5167000" />
     </task>
     <servers />
   </component>
