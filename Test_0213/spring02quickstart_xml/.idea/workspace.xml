@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c2754d11-f0c8-425a-ad7b-64ea40c765dc" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="spring-beans.schema" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1XjYF98aj9EdvXNvgA1lMVguJWc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="hello" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ApplicationSpring" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hello.ApplicationSpring" />
+      <module name="spring02quickstart_xml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hello.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ApplicationSpring" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c2754d11-f0c8-425a-ad7b-64ea40c765dc" name="Default Changelist" comment="" />
+      <created>1581560864184</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581560864184</updated>
+      <workItem from="1581560894974" duration="2474000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1398" height="208" key="GridCell.Tab.0.bottom" timestamp="1581576426027">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state width="1398" height="208" key="GridCell.Tab.0.bottom/0.23.1440.810@0.23.1440.810" timestamp="1581576426027" />
+    <state width="1398" height="208" key="GridCell.Tab.0.center" timestamp="1581576426026">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state width="1398" height="208" key="GridCell.Tab.0.center/0.23.1440.810@0.23.1440.810" timestamp="1581576426026" />
+    <state width="1398" height="208" key="GridCell.Tab.0.left" timestamp="1581576426025">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state width="1398" height="208" key="GridCell.Tab.0.left/0.23.1440.810@0.23.1440.810" timestamp="1581576426025" />
+    <state width="1398" height="208" key="GridCell.Tab.0.right" timestamp="1581576426027">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state width="1398" height="208" key="GridCell.Tab.0.right/0.23.1440.810@0.23.1440.810" timestamp="1581576426027" />
+    <state x="416" y="23" key="SettingsEditor" timestamp="1581566071941">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state x="416" y="23" key="SettingsEditor/0.23.1440.810@0.23.1440.810" timestamp="1581566071941" />
+    <state x="573" y="119" key="spring file set editor" timestamp="1581566064899">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state x="573" y="119" key="spring file set editor/0.23.1440.810@0.23.1440.810" timestamp="1581566064899" />
+  </component>
+</project>
