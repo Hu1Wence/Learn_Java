@@ -80,9 +80,9 @@
     <list>
       <item itemvalue="Application.TCPClient" />
       <item itemvalue="Application.HttpServer" />
+      <item itemvalue="Application.Test" />
       <item itemvalue="JavaScript Debug.login.html" />
       <item itemvalue="JavaScript Debug.login.html (1)" />
-      <item itemvalue="Application.Test" />
     </list>
     <recent_temporary>
       <list>
@@ -107,6 +107,7 @@
       <workItem from="1582516867247" duration="8662000" />
       <workItem from="1582613005932" duration="13186000" />
       <workItem from="1582704295630" duration="12402000" />
+      <workItem from="1582771940637" duration="2604000" />
     </task>
     <servers />
   </component>
@@ -127,29 +128,29 @@
     </state>
     <state x="533" y="162" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1582614029107" />
     <state x="533" y="169" key="#com.intellij.ide.util.MemberChooser/0.23.1440.810@0.23.1440.810" timestamp="1582709278248" />
-    <state width="1398" height="330" key="GridCell.Tab.0.bottom" timestamp="1582721962622">
+    <state width="1398" height="202" key="GridCell.Tab.0.bottom" timestamp="1582775306482">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
     <state width="1398" height="316" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1582705798643" />
-    <state width="1398" height="330" key="GridCell.Tab.0.bottom/0.23.1440.810@0.23.1440.810" timestamp="1582721962622" />
+    <state width="1398" height="202" key="GridCell.Tab.0.bottom/0.23.1440.810@0.23.1440.810" timestamp="1582775306482" />
     <state width="1398" height="188" key="GridCell.Tab.0.bottom/0.23.1440.811@0.23.1440.811" timestamp="1582533191063" />
-    <state width="1398" height="330" key="GridCell.Tab.0.center" timestamp="1582721962621">
+    <state width="1398" height="202" key="GridCell.Tab.0.center" timestamp="1582775306481">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
     <state width="1398" height="316" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1582705798639" />
-    <state width="1398" height="330" key="GridCell.Tab.0.center/0.23.1440.810@0.23.1440.810" timestamp="1582721962621" />
+    <state width="1398" height="202" key="GridCell.Tab.0.center/0.23.1440.810@0.23.1440.810" timestamp="1582775306481" />
     <state width="1398" height="188" key="GridCell.Tab.0.center/0.23.1440.811@0.23.1440.811" timestamp="1582533191062" />
-    <state width="1398" height="330" key="GridCell.Tab.0.left" timestamp="1582721962621">
+    <state width="1398" height="202" key="GridCell.Tab.0.left" timestamp="1582775306480">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
     <state width="1398" height="316" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1582705798638" />
-    <state width="1398" height="330" key="GridCell.Tab.0.left/0.23.1440.810@0.23.1440.810" timestamp="1582721962621" />
+    <state width="1398" height="202" key="GridCell.Tab.0.left/0.23.1440.810@0.23.1440.810" timestamp="1582775306480" />
     <state width="1398" height="188" key="GridCell.Tab.0.left/0.23.1440.811@0.23.1440.811" timestamp="1582533191061" />
-    <state width="1398" height="330" key="GridCell.Tab.0.right" timestamp="1582721962621">
+    <state width="1398" height="202" key="GridCell.Tab.0.right" timestamp="1582775306481">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
     <state width="1398" height="316" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1582705798642" />
-    <state width="1398" height="330" key="GridCell.Tab.0.right/0.23.1440.810@0.23.1440.810" timestamp="1582721962621" />
+    <state width="1398" height="202" key="GridCell.Tab.0.right/0.23.1440.810@0.23.1440.810" timestamp="1582775306481" />
     <state width="1398" height="188" key="GridCell.Tab.0.right/0.23.1440.811@0.23.1440.811" timestamp="1582533191062" />
     <state width="1398" height="258" key="GridCell.Tab.1.bottom" timestamp="1582626003235">
       <screen x="0" y="23" width="1440" height="810" />

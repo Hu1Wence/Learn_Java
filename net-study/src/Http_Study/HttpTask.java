@@ -16,6 +16,8 @@ public class HttpTask implements Runnable {
     //保存session的数据结构:还可以保存在其他地方，如redis中间键
     private static ConcurrentMap<String, String> SESSION = new ConcurrentHashMap<>();
 
+    private static final String SESSION_KEY = "SESSIONID";
+
     public HttpTask(Socket socket) {
         try {
             //通过客户端发送报文的输入流，创建http请求对象
@@ -67,15 +69,28 @@ public class HttpTask implements Runnable {
                     SESSION.put(sessionId, request.getParameter("username")
                             + "," + request.getParameter("password"));
 //                    response.addHeader("SESSIONID", sessionId);
-                    response.addHeader("Set-Cookie", sessionId);
-
+                    response.addHeader("Set-Cookie", SESSION_KEY + "=" + sessionId);
                 }
-
             } else if ("/sensitive".equals(request.getUrl())) {
-                String sessionId = request.getHeader("SESSION");
-                String userInfo = SESSION.get(sessionId);
-                System.out.println("====================获取到的用户信息" + userInfo);
-
+                String content = "<p>该用户没有登录</p>";
+                String sessionInfo = request.getHeader("Cookie");
+                if (sessionInfo != null && sessionInfo.trim().length() != 0) {
+                    String[] cookieInfos = sessionInfo.split(";");
+                    if (cookieInfos != null) {
+                        for (String cookieInfo : cookieInfos) {
+                            String[] cookieArray = cookieInfo.trim().split("=");
+                            if (SESSION_KEY.equals(cookieArray[0])) {
+                                String userInfo = SESSION.get(cookieArray[1]);
+                                if (userInfo !=  null) {
+                                    content = "获取到的用户信息:" + userInfo;
+                                    System.out.println("====================" + content);
+                                }
+                            }
+                        }
+                    }
+                }
+                response.build200();
+                response.println(content);
             } else {//以上所有路径都找不到，说明我们服务器不提供该URL的服务，返回404
                 response.build404();
                 response.println("找不到资源");
