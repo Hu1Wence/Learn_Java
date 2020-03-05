@@ -49,52 +49,52 @@
     var app = new Vue({
         el:"#app",
         data: {
-        language:"JAVA",
-        studentUrl:"",
+            language:"JAVA",
+            studentUrl:"",
         },
         methods:{
             init() {
                 Vue.prototype.$channelName = new Date().getTime();
                 //定义一个ace全局变量
                 Vue.prototype.$editor = ace.edit("editor"),
-                this.$editor.setOptions({
-                    enableLiveAutocompletion: true
-                });
+                    this.$editor.setOptions({
+                        enableLiveAutocompletion: true
+                    });
                 this.$editor.setTheme("ace/theme/idle_fingers");
                 this.$editor.session.setMode("ace/mode/java");
                 document.getElementById('editor').style.fontSize='30px';
-                this.$editor.setValue("//请在这里编辑您的代码"); 
+                this.$editor.setValue("//请在这里编辑您的代码");
                 this.loadConfig()
                 this.$editor.getSession().selection.clearSelection();
 
 
                 //定义一个goeasy全局变量
                 Vue.prototype.$goEasy = new GoEasy({
-                  host: "hangzhou.goeasy.io",
-                  appkey: "BS-d3f8cede1a9e41dbb65d52cb9b74000f",
-                  onConnected: function() {
-                    console.log('连接成功！')
-                    
-                  },
-                  onDisconnected: function() {
-                    console.log('连接断开！')
-                    alert("连接已断开!")
-                  },
-                  onConnectFailed: function(error) {
-                    console.log('连接失败或错误！')
-                    alert("连接失败!")
-                  }
+                    host: "hangzhou.goeasy.io",
+                    appkey: "BS-d3f8cede1a9e41dbb65d52cb9b74000f",
+                    onConnected: function() {
+                        console.log('连接成功！')
+
+                    },
+                    onDisconnected: function() {
+                        console.log('连接断开！')
+                        alert("连接已断开!")
+                    },
+                    onConnectFailed: function(error) {
+                        console.log('连接失败或错误！')
+                        alert("连接失败!")
+                    }
                 });
 
                 this.$goEasy.subscribe({
-                  channel:"studentChannel" + Vue.prototype.$channelName,//替换为您自己的channel
-                  onMessage: function (message) {
-                    console.log("Channel:" + message.channel + " content:" + message.content);
-                    var data = JSON.parse(message.content);
-                    Vue.prototype.$editor.setValue(data.code);
-                    Vue.prototype.$editor.getSession().selection.clearSelection();
-                    Vue.prototype.$editor.moveCursorToPosition(data.cursor);
-                  }
+                    channel:"studentChannel" + Vue.prototype.$channelName,//替换为您自己的channel
+                    onMessage: function (message) {
+                        console.log("Channel:" + message.channel + " content:" + message.content);
+                        var data = JSON.parse(message.content);
+                        Vue.prototype.$editor.setValue(data.code);
+                        Vue.prototype.$editor.getSession().selection.clearSelection();
+                        Vue.prototype.$editor.moveCursorToPosition(data.cursor);
+                    }
                 });
             },
 
@@ -105,21 +105,21 @@
                     Vue.prototype.$editor.session.setMode("ace/mode/c_cpp");
                 }
                 localStorage.setItem("language", this.language);
-                this.studentUrl = "http://127.0.0.1:5500/student.html?channelName=" + this.$channelName
-                            
+                this.studentUrl = "http://120.27.192.235:8080/student.html?channelName=" + this.$channelName
+
             },
 
             loadConfig() {
-            var language = localStorage.getItem("language");
-            if (language == null) {
-                return;
+                var language = localStorage.getItem("language");
+                if (language == null) {
+                    return;
+                }
+                this.language = language;
+                this.changeLanguage();
             }
-            this.language = language;
-            this.changeLanguage();
-            }
-        }   
-    }) 
-app.init()
+        }
+    })
+    app.init()
 </script>
 </body>
 </html>

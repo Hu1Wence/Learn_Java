@@ -50,12 +50,12 @@
         el: "#app",
         data: {
             language: "JAVA",
-        
+
         },
         methods: {
             init() {
-                
-                
+
+
                 //定义一个ace全局变量
                 Vue.prototype.$editor = ace.edit("editor"),
                     this.$editor.setOptions({
@@ -67,7 +67,7 @@
                 this.$editor.setValue("//请在这里编辑您的代码");
                 this.loadConfig()
                 this.$editor.getSession().selection.clearSelection();
-                
+
 
                 //定义一个goeasy全局变量
                 Vue.prototype.$goEasy = new GoEasy({
@@ -88,7 +88,7 @@
 
 
                 Vue.prototype.$channelName = getUrlChannelName();
-            
+
                 function getUrlChannelName() {
                     var ChannelName = window.location.search.split("channelName=")[1];
                     return ChannelName;
@@ -97,14 +97,14 @@
                 function myCallback() {
                     var code = Vue.prototype.$editor.getValue();
                     console.log("curCode:" + code)
-                    
+
 
                     Vue.prototype.$goEasy.publish({
                         channel: "studentChannel" + Vue.prototype.$channelName,
                         message: JSON.stringify({
                             code: code,
                             cursor: Vue.prototype.$editor.getCursorPosition(),
-                
+
                         })
                     })
                 };
@@ -114,26 +114,26 @@
 
 
             changeLanguage() {
-                    if (this.language == "Java") {
-                        Vue.prototype.$editor.session.setMode("ace/mode/java");
-                    } else if (this.language == "Cpp") {
-                        Vue.prototype.$editor.session.setMode("ace/mode/c_cpp");
-                    }
-                    localStorage.setItem("language", this.language);
+                if (this.language == "Java") {
+                    Vue.prototype.$editor.session.setMode("ace/mode/java");
+                } else if (this.language == "Cpp") {
+                    Vue.prototype.$editor.session.setMode("ace/mode/c_cpp");
+                }
+                localStorage.setItem("language", this.language);
             },
-            
+
 
             loadConfig() {
-                    var language = localStorage.getItem("language");
-                    if (language == null) {
-                        return;
-                    }
-                    this.language = language;
-                    this.changeLanguage();
+                var language = localStorage.getItem("language");
+                if (language == null) {
+                    return;
+                }
+                this.language = language;
+                this.changeLanguage();
             }
         }
     })
-app.init()
+    app.init()
 </script>
 </body>
 </html>
