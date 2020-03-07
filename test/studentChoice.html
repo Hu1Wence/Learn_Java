@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>选择题</title>
+    <style type="text/css" media="screen">
+        .div1 {
+            text-align: center;
+            font-size: 1.75rem
+        }
+
+        #editor {
+            width: 80%;
+            padding-bottom: 8%;
+        }
+    </style>
+
+
+</head>
+<body>
+<div id="app">
+
+    <div class="div1">
+        <h5>请在下方回答选择题</h3>
+    </div>
+
+      <span style="font-size: 30px;">所有题目的答案(输入完成后请按回车，答案按照A,B,C,顺序填写):</span><input type="text" style="font-size:30px; height: 35px;;width:600px;" v-model="myKey" @keyup.enter="getRightKey()">  
+    <div id="editor" style="min-height:400px">
+        <textarea style="width: 90%; "></textarea>
+    </div>
+
+   </div> 
+
+<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/ace/1.2.9/ace.js" type="text/javascript" charset="UTF-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.9/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="https://cdn.goeasy.io/goeasy-1.0.3.js"></script>
+<script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+<script>
+    var app = new Vue({
+        el:"#app",
+        data:{
+            myKey:"",
+        
+        },
+
+        methods:{
+            init() {
+                // editor 为一个全局变量
+                Vue.prototype.$editor = ace.edit("editor"),
+                this.$editor.setOptions({
+                        enableBasicAutocompletion: true,
+                        enableSnippets: true,
+                        enableLiveAutocompletion: true, 
+                });
+                this.$editor.setTheme("ace/theme/twilight");
+                this.$editor.session.setMode("ace/mode/java");
+                this.$editor.resize();
+                document.getElementById('editor').style.fontSize='30px';
+                this.$editor.setValue("等待老师同步问题。。。。 ");
+                this.$editor.getSession().selection.clearSelection();
+
+
+                Vue.prototype.$goEasy = new GoEasy({
+                    host:'hangzhou.goeasy.io',//应用所在的区域地址，杭州：hangzhou.goeasy.io，新加坡：singapore.goeasy.io
+                    appkey: "BC-835eec3d0d1c4f55a516639134e91d36",
+                    onConnected: function() {
+                        console.log('连接成功！')
+                    },
+                    onDisconnected: function() {
+                        console.log('连接断开！')
+                        alert("链接断开! 请刷新页面!")
+                    },
+                    onConnectFailed: function(error) {
+                        console.log('链接失败!')
+                        alert("链接失败! 请刷新页面!")
+                    }
+                });
+
+                this.$goEasy.subscribe({
+                    channel: "questionChannel",
+                    onMessage: function (message) {
+                        console.log("Channel:" + message.channel + " content:" + message.content);
+                        var data = JSON.parse(message.content);
+                        Vue.prototype.$editor.setValue(data.code);
+                        Vue.prototype.$editor.getSession().selection.clearSelection();
+                        Vue.prototype.$editor.moveCursorToPosition(data.cursor);
+                    }
+                });
+            },
+
+            
+            getRightKey() {
+                this.$goEasy.publish({
+                  channel: "student1Choice", //替换为您自己的channel
+                  message: this.myKey //替换为您想要发送的消息内容
+                });
+            }
+        }
+
+    })
+app.init()
+</script>
+
+
+
+</body>
+</html> 

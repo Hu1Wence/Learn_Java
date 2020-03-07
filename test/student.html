@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>学生页面</title>
+    <style type="text/css" media="screen">
+        .div1 {
+            text-align: center;
+            font-size: 1.75rem
+        }
+
+        #editor {
+            width: 100%;
+            padding-bottom: 35%;
+        }
+        .top{
+            /* 设置宽度高度背景颜色 */
+            height: 50px;
+            width:100%;
+            background:rgb(189, 181, 181);
+            position: fixed; /*固定在顶部*/
+            top: 0;/*离顶部的距离为0*/
+        }
+        .top ul{
+            /* 清除ul标签的默认样式 */
+            width: 80%;
+            list-style-type: none;
+            margin: 0;            
+            padding: 0;
+            overflow: hidden;
+
+        }
+        .top li {    
+            float:left; /* 使li内容横向浮动，即横向排列  */
+            margin-right:50px;  /* 两个li之间的距离*/
+        }
+
+        .top li a{
+           /* 设置链接内容显示的格式*/
+            display: block; /* 把链接显示为块元素可使整个链接区域可点击 */
+            color:white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none; /* 去除下划线 */
+        }
+        .top li a:hover{
+            /* 鼠标选中时背景变为黑色 */
+            background-color: #111;
+        }
+    </style>
+
+</head>
+<body>
+
+<div id="app">
+    <div class="top">
+        
+        <ul>
+        <li><a href="http://120.27.192.235:8080/showCode/teacher.html">写代码</a></li>
+        <li><a v-on:click=this.getUrl>选择题</a></li>      
+        </ul>
+             
+   </div>
+    <br>
+    <hr>
+    <div class="div1">
+        <h3>请在下面编辑框内编写代码</h3>
+    </div>
+    <hr>
+    <br>
+    <form>
+        <select style="font-size: 30px; width: 200px"  v-model="language" v-on:change="changeLanguage()">
+            <option >cpp</option>
+            <option >java</option>
+        </select>
+    </form>
+    <div id="editor" style="min-height:600px">
+        <textarea style="width: 100%; height: 500px"></textarea>
+    </div>
+</div>
+
+
+<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/ace/1.2.9/ace.js" type="text/javascript" charset="UTF-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.9/ext-language_tools.js" type="text/javascript"
+        charset="utf-8"></script>
+<script type="text/javascript" src="https://cdn.goeasy.io/goeasy-1.0.3.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            language: "java",
+        },
+        methods: {
+            init() {
+                
+                
+                this.language="java";
+                //定义一个ace全局变量
+                Vue.prototype.$editor = ace.edit("editor"),
+                    this.$editor.setOptions({
+                        enableBasicAutocompletion: true,
+                        enableSnippets: true,
+                        enableLiveAutocompletion: false
+                    });
+                this.$editor.setTheme("ace/theme/twilight");
+                this.$editor.session.setMode("ace/mode/java");
+                document.getElementById('editor').style.fontSize='30px';
+                this.$editor.resize();
+                this.$editor.setValue("//请在这里编辑您的代码");
+                this.$editor.setHighlightActiveLine(false);
+                this.$editor.getSession().selection.clearSelection();
+
+                //定义一个goeasy全局变量
+                Vue.prototype.$goEasy = new GoEasy({
+                    host: "hangzhou.goeasy.io",
+                    appkey: "BC-835eec3d0d1c4f55a516639134e91d36",//替换为您的应用appkey
+                    onConnected: function () {
+                        console.log('连接成功！')
+                    },
+                    onDisconnected: function () {
+                        console.log('连接断开！')
+                        alert("连接断开")
+                    },
+                    onConnectFailed: function (error) {
+                        console.log('连接失败或错误！')
+                        alert("连接失败!")
+                    }
+                });
+
+
+                Vue.prototype.$channelName = getUrlChannelName();
+
+                function getUrlChannelName() {
+                    var ChannelName = window.location.search.split("channelName=")[1];
+                    return ChannelName;
+                };
+
+                function myCallback() {
+                    var code = Vue.prototype.$editor.getValue();
+                    console.log("curCode:" + code)
+                    Vue.prototype.$goEasy.publish({
+                        channel: "studentChannel" + Vue.prototype.$channelName,
+                        message: JSON.stringify({
+                            code: code,
+                            cursor: Vue.prototype.$editor.getCursorPosition(),
+
+                        })
+                    })
+                };
+                this.$editor.getSession().on('change', myCallback);
+                this.$editor.getSession().selection.on('changeCursor', myCallback);
+
+
+                this.$goEasy.subscribe({
+                channel: "teacherChannel" + Vue.prototype.$channelName,
+                onMessage: function (message) {
+                    console.log("Channel:" + message.channel + " content:" + message.content);
+
+                    if (window.confirm("老师正在向你同步代码模板, 是否接受?")) {
+                        Vue.prototype.$editor.setValue(message.content);
+                        Vue.prototype.$editor.getSession().selection.clearSelection();
+
+                        // 同步代码成功, 告知教师端
+                        Vue.prototype.$goEasy.publish({
+                            channel: "studentResp" + Vue.prototype.$channelName,
+                            message: "模板代码同步完成!",
+                        });
+                    }
+                }
+            });
+
+
+
+
+
+
+                this.$goEasy.publish({
+                    channel: "studentResp" + Vue.prototype.$channelName,
+                    message: "上线",
+                });
+
+                // 加载本地配置
+                this.loadConfig();
+                console.log("init done");
+            },
+
+            getUrl() {
+                var a = window.location.href;
+                window.open("http://120.27.192.235:8080/showCode/student.html?channelName="+a.split("=")[1]);
+            },
+
+            changeLanguage() {
+                console.log("changeLanguage: " + this.language);
+                if (this.language == "java") {
+                    Vue.prototype.$editor.session.setMode("ace/mode/java");
+                
+                } else if (this.language == "cpp") {
+                    Vue.prototype.$editor.session.setMode("ace/mode/c_cpp");
+                
+                }
+                localStorage.setItem("language", this.language);
+            },
+
+
+            loadConfig() {
+                this.changeLanguage();
+            }
+        }
+    })
+    app.init()
+</script>
+</body>
+</html>

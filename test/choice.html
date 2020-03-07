@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>选择题</title>
+
+    <style type="text/css" media="screen">
+        .div1 {
+            text-align: center;
+            font-size: 1.75rem
+        }
+        .top{
+            /* 设置宽度高度背景颜色 */
+            height: 50px;
+            width:100%;
+            background:rgb(189, 181, 181);
+            position: fixed; /*固定在顶部*/
+            top: 0;/*离顶部的距离为0*/
+        }
+        .top ul{
+            /* 清除ul标签的默认样式 */
+            width: 80%;
+            list-style-type: none;
+            margin: 0;            
+            padding: 0;
+            overflow: hidden;
+
+        }
+        .top li {    
+            float:left; /* 使li内容横向浮动，即横向排列  */
+            margin-right:50px;  /* 两个li之间的距离*/
+        }
+
+        .top li a{
+           /* 设置链接内容显示的格式*/
+            display: block; /* 把链接显示为块元素可使整个链接区域可点击 */
+            color:white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none; /* 去除下划线 */
+        }
+        .top li a:hover{
+            /* 鼠标选中时背景变为黑色 */
+            background-color: #111;
+        }
+    </style>
+
+
+</head>
+<body>
+<div id="app">
+
+    <div class="div1">
+        <br/>
+        <h5>请在下方编写选择题</h3>
+    </div>
+    <div class="top">
+        
+        <ul>
+
+         <li><a href="http://120.27.192.235:8080/showCode/teacher.html">写代码</a></li>
+         <li><a href="http://120.27.192.235:8080/showCode/choice.html">选择题</a></li>
+         <li><a href="http://120.27.192.235:8080/showCode/showScore.html">学生成绩分布图</a></li>
+               
+        </ul>
+              
+    </div>
+      <span style="font-size: 30px;">设置所有题目的答案(输入完成后请按回车，答案按照A,B,C,顺序设置):</span><input type="text" style="font-size:30px; height: 35px;;width:600px;" v-model="rightKey" @keyup.enter="getRightKey()">  
+    <input="text" style="min-height:400px">
+    
+
+    <div id="main" style="width: 400px;height:300px; position: relative; left: 950px; top:-500px"></div>
+    <div style="font-size:27px;background: grey; position: relative;top:-300px" >学生1链接:{{student1Url}}</div>
+    <div style="font-size:27px;background: grey; position: relative;top:-300px" >学生2链接:{{student2Url}}</div>
+    <div style="font-size:27px;background: grey; position: relative;top:-300px" >学生3链接:{{student3Url}}</div>
+</div> 
+
+<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/ace/1.2.9/ace.js" type="text/javascript" charset="UTF-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.9/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="https://cdn.goeasy.io/goeasy-1.0.3.js"></script>
+<script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+<script>
+    var app = new Vue({
+        el:"#app",
+        data:{
+            rightKey:"",
+            student1Url:"http://120.27.192.235:8080/showCode/studentChoice.html",
+            studentScore:1,
+        },
+
+        methods:{
+            init() {
+                // editor 为一个全局变量
+                Vue.prototype.$editor = ace.edit("editor"),
+                this.$editor.setOptions({
+                        enableBasicAutocompletion: true,
+                        enableSnippets: true,
+                        enableLiveAutocompletion: true, 
+                });
+                this.$editor.setTheme("ace/theme/twilight");
+                this.$editor.session.setMode("ace/mode/java");
+                this.$editor.resize();
+                document.getElementById('editor').style.fontSize='30px';
+                this.$editor.setValue("请书写选择题");
+                this.$editor.getSession().selection.clearSelection();
+
+
+                Vue.prototype.$goEasy = new GoEasy({
+                    host:'hangzhou.goeasy.io',//应用所在的区域地址，杭州：hangzhou.goeasy.io，新加坡：singapore.goeasy.io
+                    appkey: "BC-835eec3d0d1c4f55a516639134e91d36",
+                    onConnected: function() {
+                        console.log('连接成功！')
+                    },
+                    onDisconnected: function() {
+                        console.log('连接断开！')
+                        alert("链接断开! 请刷新页面!")
+                    },
+                    onConnectFailed: function(error) {
+                        console.log('链接失败!')
+                        alert("链接失败! 请刷新页面!")
+                    }
+                });
+
+                function myCallback() {
+                    var code = Vue.prototype.$editor.getValue();
+                    console.log("curCode:" + code)
+                    Vue.prototype.$goEasy.publish({
+                        channel: "questionChannel",
+                        message: JSON.stringify({
+                            code: code,
+                            cursor: Vue.prototype.$editor.getCursorPosition(),
+
+                        })
+                    })
+                };
+                this.$editor.getSession().on('change', myCallback);
+                this.$editor.getSession().selection.on('changeCursor', myCallback);            
+            },
+
+        }
+
+    })
+app.init()
+</script>
+</body>
+</html> 

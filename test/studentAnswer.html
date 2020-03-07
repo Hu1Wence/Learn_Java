@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>学生页面</title>
+    <style type="text/css" media="screen">
+        .div1 {
+            text-align: center;
+            font-size: 1.75rem
+        }
+
+        #editor {
+            width: 60%;
+            padding-bottom: 8%;
+        }
+    </style>
+
+</head>
+<body>
+<div id="app">
+
+    <div class="div1">
+        <h5>下方老师查看的</h3>
+    </div>
+
+    <div id="editor" style="min-height:400px">
+        <textarea style="width: 50%; "></textarea>
+    </div>
+    <div id="main" style="width: 400px;height:300px; position: relative; left: 950px; top:-500px"></div>
+    
+</div> 
+
+<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/ace/1.2.9/ace.js" type="text/javascript" charset="UTF-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.9/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="https://cdn.goeasy.io/goeasy-1.0.3.js"></script>
+<script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+<script>
+    var app = new Vue({
+        el:"#app",
+        data:{
+            studentUrl:"",
+        },
+
+        methods:{
+            init() {
+                // editor 为一个全局变量
+                Vue.prototype.$editor = ace.edit("editor"),
+                this.$editor.setOptions({
+                        enableBasicAutocompletion: true,
+                        enableSnippets: true,
+                        enableLiveAutocompletion: true, 
+                });
+                this.$editor.setTheme("ace/theme/twilight");
+                this.$editor.session.setMode("ace/mode/java");
+                this.$editor.resize();
+                document.getElementById('editor').style.fontSize='30px';
+                this.$editor.setValue("请书写选择题");
+                this.$editor.getSession().selection.clearSelection();
+
+                
+            }
+        }
+
+    })
+app.init()
+</script>
+
+
+
+</body>
+</html> 
