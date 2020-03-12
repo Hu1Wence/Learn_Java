@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ebf51223-4e5b-414b-9eea-cfcd13559099" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YZbTqiHhLRPoNuSDexcjws2gjn" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="每日一题" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ebf51223-4e5b-414b-9eea-cfcd13559099" name="Default Changelist" comment="" />
+      <created>1583153073350</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583153073350</updated>
+      <workItem from="1583153076755" duration="2549000" />
+      <workItem from="1583155717403" duration="16000" />
+      <workItem from="1583158846117" duration="20000" />
+      <workItem from="1583234401768" duration="206000" />
+      <workItem from="1583234792161" duration="24000" />
+      <workItem from="1583293463681" duration="4603000" />
+      <workItem from="1583328579200" duration="2205000" />
+      <workItem from="1583331212650" duration="9000" />
+      <workItem from="1583414704903" duration="256000" />
+      <workItem from="1583547953619" duration="1246000" />
+      <workItem from="1583670879760" duration="1955000" />
+      <workItem from="1583808336017" duration="1904000" />
+      <workItem from="1583841349281" duration="1335000" />
+      <workItem from="1583850502189" duration="366000" />
+      <workItem from="1583927569051" duration="1896000" />
+      <workItem from="1584020080336" duration="2492000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1398" height="363" key="GridCell.Tab.0.bottom" timestamp="1584022751467">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state width="1398" height="363" key="GridCell.Tab.0.bottom/0.23.1440.810@0.23.1440.810" timestamp="1584022751467" />
+    <state width="1398" height="363" key="GridCell.Tab.0.center" timestamp="1584022751467">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state width="1398" height="363" key="GridCell.Tab.0.center/0.23.1440.810@0.23.1440.810" timestamp="1584022751467" />
+    <state width="1398" height="363" key="GridCell.Tab.0.left" timestamp="1584022751466">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state width="1398" height="363" key="GridCell.Tab.0.left/0.23.1440.810@0.23.1440.810" timestamp="1584022751466" />
+    <state width="1398" height="363" key="GridCell.Tab.0.right" timestamp="1584022751467">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state width="1398" height="363" key="GridCell.Tab.0.right/0.23.1440.810@0.23.1440.810" timestamp="1584022751467" />
+    <state width="1398" height="363" key="GridCell.Tab.1.bottom" timestamp="1584022751469">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state width="1398" height="363" key="GridCell.Tab.1.bottom/0.23.1440.810@0.23.1440.810" timestamp="1584022751469" />
+    <state width="1398" height="363" key="GridCell.Tab.1.center" timestamp="1584022751468">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state width="1398" height="363" key="GridCell.Tab.1.center/0.23.1440.810@0.23.1440.810" timestamp="1584022751468" />
+    <state width="1398" height="363" key="GridCell.Tab.1.left" timestamp="1584022751468">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state width="1398" height="363" key="GridCell.Tab.1.left/0.23.1440.810@0.23.1440.810" timestamp="1584022751468" />
+    <state width="1398" height="363" key="GridCell.Tab.1.right" timestamp="1584022751468">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state width="1398" height="363" key="GridCell.Tab.1.right/0.23.1440.810@0.23.1440.810" timestamp="1584022751468" />
+    <state x="443" y="67" key="SettingsEditor" timestamp="1583234814489">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state x="443" y="67" key="SettingsEditor/0.23.1440.810@0.23.1440.810" timestamp="1583234814489" />
+    <state x="136" y="23" key="new project wizard" timestamp="1583234541803">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state x="136" y="23" key="new project wizard/0.23.1440.810@0.23.1440.810" timestamp="1583234541802" />
+    <state x="809" y="157" width="670" height="676" key="search.everywhere.popup" timestamp="1584022508296">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state x="809" y="157" width="670" height="676" key="search.everywhere.popup/0.23.1440.810@0.23.1440.810" timestamp="1584022508296" />
+  </component>
+</project>
